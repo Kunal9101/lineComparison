@@ -1,29 +1,53 @@
 import java.util.*;
 
 public class lineComparison {
-    //creating method
-    public void calculateLenght(double x1, double y1, double x2, double y2){
-        double result = Math.sqrt(Math.pow(x2 -x1 , 2) + Math.pow(y2 - y1 , 2));
-        System.out.println("Result is: "+ result);
-    }
+
     public static void main(String[] args) {
         System.out.println("Welcome to line comparison program");
         Scanner scan = new Scanner(System.in);
 
-        //taking user input
-        System.out.println("Enter a value for x1: ");
-        double val_x1 = scan.nextDouble();
+        //taking user input for line one
+        System.out.println("Enter Co-ordinates for line 1");
+        System.out.println("Enter a value for line 1- x1: ");
+        double val1_x1 = scan.nextDouble();
 
-        System.out.println("Enter a value for y1: ");
-        double val_y1 = scan.nextDouble();
+        System.out.println("Enter a value for line 1- y1: ");
+        double val1_y1 = scan.nextDouble();
 
-        System.out.println("Enter a value for x2: ");
-        double val_x2 = scan.nextDouble();
+        System.out.println("Enter a value for line 1- x2: ");
+        double val1_x2 = scan.nextDouble();
 
-        System.out.println("Enter a value for y2: ");
-        double val_y2 = scan.nextDouble();
+        System.out.println("Enter a value for line 1- y2: ");
+        double val1_y2 = scan.nextDouble();
 
-        lineComparison obj = new lineComparison();
-        obj.calculateLenght(val_x1, val_y1, val_x2, val_y2);
+        //creating first line array
+        double [] first_line = {val1_x1 , val1_y1 , val1_x2 , val1_y2};
+
+         //taking user input for line two
+         System.out.println("\nEnter Co-ordinates for line 2");
+         System.out.println("Enter a value for line 2- x1: ");
+         double val2_x1 = scan.nextDouble();
+ 
+         System.out.println("Enter a value for line 2- y1: ");
+         double val2_y1 = scan.nextDouble();
+ 
+         System.out.println("Enter a value for line 2- x2: ");
+         double val2_x2 = scan.nextDouble();
+ 
+         System.out.println("Enter a value for line 2- y2: ");
+         double val2_y2 = scan.nextDouble();
+ 
+         //creating first line array
+         double [] second_line = {val2_x1 , val2_y1 , val2_x2 , val2_y2};
+
+         //checking wheather equal or not
+         
+         if (Arrays.equals(first_line, second_line) == true){
+            System.out.println("\nBoth Entered line are equal...");
+         } else {
+            System.out.println("\nBoth Entered line are different...");
+         }
+
+
     }
 }
