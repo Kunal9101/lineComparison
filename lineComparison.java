@@ -41,6 +41,7 @@ public class lineComparison {
          double [] second_line = {val2_x1 , val2_y1 , val2_x2 , val2_y2};
 
          //checking wheather equal or greather than or less than
+         //hi line delete kar
          
         if (Arrays.compare(first_line, second_line) > 0){
             System.out.println("\nFirst line is Greater than second line___");
